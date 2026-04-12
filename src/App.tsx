@@ -4,7 +4,7 @@
  */
 
 import { motion, AnimatePresence } from "motion/react";
-import { useState, type ReactNode } from "react";
+import { useState, useEffect, type ReactNode } from "react";
 import { 
   BarChart3, 
   Database, 
@@ -44,7 +44,7 @@ interface Project {
   title: string;
   description: string;
   fullDescription: string;
-  technologies: string[];
+  technologies: { name: string; icon: string }[];
   toolUsage: { name: string; value: number }[];
   progress: number;
   date: string;
@@ -119,7 +119,12 @@ const getProjects = (lang: Language): Project[] => [
     fullDescription: lang === 'es' 
       ? "Desarrollé una solución en React Native para automatizar la gestión de la estructura organizacional y novedades de nómina. El impacto fue masivo, reduciendo procesos manuales de hasta 14 horas a solo minutos (reducción del 99%), eliminando errores y beneficiando a más de 12 áreas críticas incluyendo RRHH y Producción."
       : "I developed a React Native solution to automate organizational structure management and payroll news. The impact was massive, reducing manual processes of up to 14 hours to just minutes (99% reduction), eliminating errors and benefiting more than 12 critical areas including HR and Production.",
-    technologies: ["React Native", "TypeScript", "Node.js", "SQL Server"],
+    technologies: [
+      { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+      { name: "SQL Server", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" }
+    ],
     toolUsage: [
       { name: "React Native", value: 95 },
       { name: "TypeScript", value: 85 },
@@ -137,7 +142,12 @@ const getProjects = (lang: Language): Project[] => [
     fullDescription: lang === 'es'
       ? "Implementé un flujo de automatización con n8n que actualiza diariamente más de 10 tasas de cambio mediante APIs. Este sistema ahorró aproximadamente 130 horas de trabajo manual y eliminó por completo el riesgo de error humano en reportes críticos."
       : "I implemented an automation flow with n8n that daily updates more than 10 exchange rates via APIs. This system saved approximately 130 hours of manual work and completely eliminated the risk of human error in critical reports.",
-    technologies: ["n8n", "APIs", "JSON", "Automation"],
+    technologies: [
+      { name: "n8n", icon: "https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-logo.png" },
+      { name: "APIs", icon: "https://cdn-icons-png.flaticon.com/512/603/603197.png" },
+      { name: "JSON", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg" },
+      { name: "Automation", icon: "https://cdn-icons-png.flaticon.com/512/1903/1903162.png" }
+    ],
     toolUsage: [
       { name: "n8n", value: 90 },
       { name: "APIs", value: 80 },
@@ -155,7 +165,12 @@ const getProjects = (lang: Language): Project[] => [
     fullDescription: lang === 'es'
       ? "Lideré la reorganización de tableros estadísticos y de análisis de datos para transformarlos en herramientas intuitivas y comprensibles, diseñadas específicamente para perfiles no técnicos como psicólogos de selección. Utilicé herramientas como Power BI, Looker Studio y Dash para presentar métricas complejas de forma clara, facilitando la evaluación de candidatos y el seguimiento de KPIs operativos."
       : "I led the reorganization of statistical and data analysis dashboards to transform them into intuitive and understandable tools, specifically designed for non-technical profiles such as selection psychologists. I used tools like Power BI, Looker Studio, and Dash to present complex metrics clearly, facilitating candidate evaluation and operational KPI monitoring.",
-    technologies: ["Power BI", "Looker Studio", "Dash", "SQL", "Statistics"],
+    technologies: [
+      { name: "Power BI", icon: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Power_bi_logo_black.svg" },
+      { name: "Looker Studio", icon: "https://upload.wikimedia.org/wikipedia/commons/9/91/Looker_Studio_logo.svg" },
+      { name: "Dash", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Plotly-logo.png/1200px-Plotly-logo.png" },
+      { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" }
+    ],
     toolUsage: [
       { name: "Power BI", value: 90 },
       { name: "Looker Studio", value: 85 },
@@ -173,7 +188,12 @@ const getProjects = (lang: Language): Project[] => [
     fullDescription: lang === 'es'
       ? "Desarrollo de ecosistemas de reportes avanzados integrando datos de ERPs líderes como SAP, SAP Business One y Epicor (en Simex). Mi trabajo se centró en la creación de dashboards ejecutivos en Power BI y Looker que permiten una visibilidad total de la cadena de valor, optimizando los tiempos de respuesta de la gerencia mediante datos precisos y visualizaciones de alto impacto."
       : "Development of advanced reporting ecosystems integrating data from leading ERPs such as SAP, SAP Business One, and Epicor (at Simex). My work focused on creating executive dashboards in Power BI and Looker that allow full visibility of the value chain, optimizing management response times through precise data and high-impact visualizations.",
-    technologies: ["SAP", "Epicor", "Power BI", "Looker", "SSRS"],
+    technologies: [
+      { name: "SAP", icon: "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" },
+      { name: "Epicor", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Epicor_logo.svg/1200px-Epicor_logo.svg.png" },
+      { name: "Power BI", icon: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Power_bi_logo_black.svg" },
+      { name: "Looker", icon: "https://upload.wikimedia.org/wikipedia/commons/0/03/Looker_logo.svg" }
+    ],
     toolUsage: [
       { name: "ERP Integration", value: 95 },
       { name: "Power BI", value: 90 },
@@ -191,7 +211,11 @@ const getProjects = (lang: Language): Project[] => [
     fullDescription: lang === 'es'
       ? "Lidero la adopción de IA en el entorno corporativo, utilizando Copilot Studio para crear asistentes que optimizan el desarrollo, el análisis de datos y la automatización de tareas repetitivas, elevando la productividad del equipo."
       : "I lead the adoption of AI in the corporate environment, using Copilot Studio to create assistants that optimize development, data analysis, and automation of repetitive tasks, raising team productivity.",
-    technologies: ["Copilot Studio", "Generative AI", "Prompt Engineering", "Automation"],
+    technologies: [
+      { name: "Copilot Studio", icon: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Microsoft_Copilot_logo.svg" },
+      { name: "Generative AI", icon: "https://cdn-icons-png.flaticon.com/512/10617/10617066.png" },
+      { name: "Automation", icon: "https://cdn-icons-png.flaticon.com/512/1903/1903162.png" }
+    ],
     toolUsage: [
       { name: "Copilot", value: 90 },
       { name: "AI Logic", value: 85 },
@@ -204,15 +228,20 @@ const getProjects = (lang: Language): Project[] => [
   },
   {
     id: 9,
-    title: lang === 'es' ? "Asistente Bambini: Inclusión Visual con IA" : "Bambini Assistant: Visual Inclusion with AI",
+    title: lang === 'es' ? "Asistente Bambini: Inclusión Visual con IA (Van Gogh)" : "Bambini Assistant: Visual Inclusion with AI (Van Gogh)",
     description: lang === 'es' ? "Asistente de voz inteligente para mejorar la experiencia de personas con discapacidad visual en museos." : "Intelligent voice assistant to improve the experience of visually impaired people in museums.",
     fullDescription: lang === 'es'
-      ? "Proyecto de investigación desarrollado en la Universidad Salazar y Herrera. Bambini es un asistente de IA diseñado para actuar como intérprete visual en museos y sitios turísticos de Colombia. Utiliza visión artificial para describir detalladamente obras de arte, cuadros y lienzos, permitiendo que personas con discapacidad visual o baja visión tengan una experiencia inmersiva y educativa."
-      : "Research project developed at Universidad Salazar y Herrera. Bambini is an AI assistant designed to act as a visual interpreter in museums and tourist sites in Colombia. It uses computer vision to describe artworks, paintings, and canvases in detail, allowing visually impaired or low-vision people to have an immersive and educational experience.",
-    technologies: ["Generative AI", "Computer Vision", "Voice Synthesis", "Accessibility"],
+      ? "Proyecto de investigación desarrollado en la Universidad Salazar y Herrera. Bambini es un asistente de IA diseñado para actuar como intérprete visual en museos y sitios turísticos de Colombia. Utilicé Python para el desarrollo de redes neuronales y visión artificial que describen detalladamente obras de arte, cuadros y lienzos, permitiendo que personas con discapacidad visual o baja visión tengan una experiencia inmersiva y educativa."
+      : "Research project developed at Universidad Salazar y Herrera. Bambini is an AI assistant designed to act as a visual interpreter in museums and tourist sites in Colombia. I used Python for developing neural networks and computer vision to describe artworks, paintings, and canvases in detail, allowing visually impaired or low-vision people to have an immersive and educational experience.",
+    technologies: [
+      { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+      { name: "Generative AI", icon: "https://cdn-icons-png.flaticon.com/512/10617/10617066.png" },
+      { name: "Computer Vision", icon: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png" },
+      { name: "Voice Synthesis", icon: "https://cdn-icons-png.flaticon.com/512/2950/2950137.png" }
+    ],
     toolUsage: [
-      { name: "AI Vision", value: 95 },
-      { name: "Voice UI", value: 90 },
+      { name: "Python", value: 95 },
+      { name: "AI Vision", value: 90 },
       { name: "Research", value: 85 }
     ],
     progress: 100,
@@ -228,6 +257,21 @@ export default function App() {
   const [showSkills, setShowSkills] = useState(false);
   const [showContact, setShowContact] = useState(false);
   const [lang, setLang] = useState<Language>('es');
+  const [bgIndex, setBgIndex] = useState(0);
+
+  const bgImages = [
+    "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80", // Software Dev
+    "https://images.unsplash.com/photo-1518433278981-2ad502fbb1b9?auto=format&fit=crop&w=1920&q=80", // Automation
+    "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1920&q=80", // AI
+    "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80"  // Technology
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setBgIndex((prev) => (prev + 1) % bgImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   const t = (translations[lang] as any);
   const projects = getProjects(lang);
@@ -236,9 +280,27 @@ export default function App() {
     <div className="h-screen bg-[#f0f4f8] text-slate-800 font-sans selection:bg-blue-500/30 overflow-hidden flex flex-col relative">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-        <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-blue-400/10 rounded-full blur-[120px]" />
-        <div className="absolute top-[20%] -right-[10%] w-[30%] h-[30%] bg-purple-400/10 rounded-full blur-[100px]" />
-        <div className="absolute -bottom-[10%] left-[20%] w-[35%] h-[35%] bg-indigo-400/10 rounded-full blur-[110px]" />
+        <AnimatePresence mode="wait">
+          <motion.div 
+            key={bgIndex}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 0.15, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 2, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <img 
+              src={bgImages[bgIndex]} 
+              className="w-full h-full object-cover"
+              referrerPolicy="no-referrer"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#f0f4f8]/80 via-transparent to-[#f0f4f8]/80" />
+          </motion.div>
+        </AnimatePresence>
+
+        <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-blue-400/30 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute top-[20%] -right-[10%] w-[30%] h-[30%] bg-purple-400/30 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute -bottom-[10%] left-[20%] w-[35%] h-[35%] bg-indigo-400/30 rounded-full blur-[110px] animate-pulse" style={{ animationDelay: '4s' }} />
       </div>
 
       {/* Top Navigation Bar */}
@@ -568,11 +630,20 @@ export default function App() {
 
                     <div>
                       <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-4">{t.techStack}</h4>
-                      <div className="flex flex-wrap gap-2.5">
+                      <div className="flex flex-wrap gap-3">
                         {selectedProject.technologies.map(tech => (
-                          <span key={tech} className="px-4 py-2 bg-slate-50 text-slate-700 rounded-xl text-[10px] font-black border border-slate-200 shadow-sm">
-                            {tech}
-                          </span>
+                          <div key={tech.name} className="flex items-center gap-2 px-3 py-1.5 bg-white border border-slate-100 rounded-xl shadow-sm hover:shadow-md transition-all group/tech">
+                            <img 
+                              src={tech.icon} 
+                              alt={tech.name} 
+                              className="w-4 h-4 object-contain group-hover/tech:scale-110 transition-transform"
+                              referrerPolicy="no-referrer"
+                              onError={(e) => {
+                                (e.target as HTMLImageElement).src = 'https://cdn-icons-png.flaticon.com/512/603/603197.png';
+                              }}
+                            />
+                            <span className="text-[10px] font-black text-slate-700">{tech.name}</span>
+                          </div>
                         ))}
                       </div>
                     </div>
