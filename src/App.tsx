@@ -79,7 +79,7 @@ const translations = {
     interestsTitle: "Intereses",
     interests: ["Análisis de datos", "Inteligencia artificial", "Software", "Programación orientada a objetos", "Bases de datos", "Transformación digital", "Business Intelligence", "Cloud Computing"],
     skillsTitle: "Habilidades",
-    skills: ["Python", "Html", "Css", "JavaScript", "Node.js", "TypeScript", "React", "Vue.js", "Nuxt.js", "Vite", ".Net", "SQL", "C#", "C++", "Java", "Php", "Bash", "MongoDB", "LookerDB", "Docker", "N8N", "Power Automate", "Power Apps", "Excel", "Sharepoint", "Copilot studio", "Figma", "Visual Studio Code", "Visual Studio Community", "Ubuntu", "CentOS", "Linux Mint", "Scrum", "Jira", "Looker", "Looker Studio", "SAP", "SAP Business One", "Dash"]
+    skills: ["Python", "Html", "Css", "JavaScript", "Node.js", "TypeScript", "React", "Vue.js", "Nuxt.js", "Vite", "Power BI", ".Net", "SQL", "C#", "C++", "Java", "Php", "Bash", "MongoDB", "LookerDB", "Docker", "N8N", "Power Automate", "Power Apps", "Excel", "Sharepoint", "Copilot studio", "Figma", "Visual Studio Code", "Visual Studio Community", "Ubuntu", "CentOS", "Linux Mint", "Scrum", "Jira", "Looker", "Looker Studio", "SAP", "SAP Business One", "Dash"]
   },
   en: {
     role: "Software Development / Data & Automation Specialist",
@@ -107,8 +107,51 @@ const translations = {
     interestsTitle: "Interests",
     interests: ["Data Analysis", "Artificial Intelligence", "Software", "Object-Oriented Programming", "Databases", "Digital Transformation", "Business Intelligence", "Cloud Computing"],
     skillsTitle: "Skills",
-    skills: ["Python", "Html", "Css", "JavaScript", "Node.js", "TypeScript", "React", "Vue.js", "Nuxt.js", "Vite", ".Net", "SQL", "C#", "C++", "Java", "Php", "Bash", "MongoDB", "LookerDB", "Docker", "N8N", "Power Automate", "Power Apps", "Excel", "Sharepoint", "Copilot studio", "Figma", "Visual Studio Code", "Visual Studio Community", "Ubuntu", "CentOS", "Linux Mint", "Scrum", "Jira", "Looker", "Looker Studio", "SAP", "SAP Business One", "Dash"]
+    skills: ["Python", "Html", "Css", "JavaScript", "Node.js", "TypeScript", "React", "Vue.js", "Nuxt.js", "Vite", "Power BI", ".Net", "SQL", "C#", "C++", "Java", "Php", "Bash", "MongoDB", "LookerDB", "Docker", "N8N", "Power Automate", "Power Apps", "Excel", "Sharepoint", "Copilot studio", "Figma", "Visual Studio Code", "Visual Studio Community", "Ubuntu", "CentOS", "Linux Mint", "Scrum", "Jira", "Looker", "Looker Studio", "SAP", "SAP Business One", "Dash"]
   }
+};
+
+const skillLogos: Record<string, string> = {
+  "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  "Html": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  "Css": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  "Vue.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+  "Nuxt.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg",
+  "Vite": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg",
+  "Power BI": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Power_bi_logo_black.svg",
+  ".Net": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg",
+  "SQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  "C#": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+  "C++": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+  "Java": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  "Php": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+  "Bash": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
+  "MongoDB": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  "LookerDB": "https://upload.wikimedia.org/wikipedia/commons/0/03/Looker_logo.svg",
+  "Docker": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  "N8N": "https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-logo.png",
+  "Power Automate": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Microsoft_Power_Automate.svg/1200px-Microsoft_Power_Automate.svg.png",
+  "Power Apps": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Microsoft_Power_Apps.svg/1200px-Microsoft_Power_Apps.svg.png",
+  "Excel": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png",
+  "Sharepoint": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Microsoft_SharePoint.svg/1200px-Microsoft_SharePoint.svg.png",
+  "Copilot studio": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Microsoft_Copilot_logo.svg",
+  "Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+  "Visual Studio Code": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+  "Visual Studio Community": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg",
+  "Ubuntu": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg",
+  "CentOS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/centos/centos-original.svg",
+  "Linux Mint": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linuxmint/linuxmint-original.svg",
+  "Scrum": "https://cdn-icons-png.flaticon.com/512/5360/5360800.png",
+  "Jira": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
+  "Looker": "https://upload.wikimedia.org/wikipedia/commons/0/03/Looker_logo.svg",
+  "Looker Studio": "https://upload.wikimedia.org/wikipedia/commons/9/91/Looker_Studio_logo.svg",
+  "SAP": "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg",
+  "SAP Business One": "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg",
+  "Dash": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Plotly-logo.png/1200px-Plotly-logo.png"
 };
 
 const getProjects = (lang: Language): Project[] => [
@@ -277,14 +320,14 @@ export default function App() {
   const projects = getProjects(lang);
 
   return (
-    <div className="h-screen bg-[#f0f4f8] text-slate-800 font-sans selection:bg-blue-500/30 overflow-hidden flex flex-col relative">
+    <div className="h-screen bg-[#f0f4f8]/50 text-slate-800 font-sans selection:bg-blue-500/30 overflow-hidden flex flex-col relative">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <AnimatePresence mode="wait">
           <motion.div 
             key={bgIndex}
             initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 0.15, scale: 1 }}
+            animate={{ opacity: 0.35, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 2, ease: "easeInOut" }}
             className="absolute inset-0"
@@ -294,7 +337,7 @@ export default function App() {
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#f0f4f8]/80 via-transparent to-[#f0f4f8]/80" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#f0f4f8]/60 via-transparent to-[#f0f4f8]/60" />
           </motion.div>
         </AnimatePresence>
 
@@ -304,7 +347,7 @@ export default function App() {
       </div>
 
       {/* Top Navigation Bar */}
-      <header className="h-16 border-b border-white/40 bg-white/60 backdrop-blur-2xl flex items-center justify-between px-6 z-50 shadow-sm relative">
+      <header className="h-16 border-b border-white/20 bg-white/40 backdrop-blur-2xl flex items-center justify-between px-6 z-50 shadow-sm relative">
         <div className="flex items-center gap-3">
           <div className="relative group">
             <div className="absolute -inset-1.5 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 rounded-full blur opacity-40 group-hover:opacity-70 transition-opacity"></div>
@@ -425,11 +468,11 @@ export default function App() {
                       scale: 1.05,
                       rotateX: 4,
                       rotateY: 4,
-                      boxShadow: "0 25px 50px -12px rgb(0 0 0 / 0.1)"
+                      boxShadow: "0 25px 50px -12px rgb(0 0 0 / 0.15)"
                     }}
                     whileTap={{ scale: 0.98 }}
                     onClick={() => setSelectedProject(project)}
-                    className={`aspect-square bg-white/80 backdrop-blur-sm border border-white rounded-[2.5rem] p-5 md:p-7 ${color.hover} transition-all cursor-pointer group flex flex-col justify-between shadow-xl shadow-slate-200/50 perspective-1000`}
+                    className={`aspect-square bg-white/60 backdrop-blur-md border border-white/40 rounded-[2.5rem] p-5 md:p-7 ${color.hover} transition-all cursor-pointer group flex flex-col justify-between shadow-xl shadow-slate-200/30 perspective-1000`}
                   >
                     <div className="flex justify-between items-start">
                       <div className={`p-3 ${color.bg} rounded-2xl ${color.icon} group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-sm`}>
@@ -460,7 +503,7 @@ export default function App() {
         </div>
 
         {/* Footer Bar */}
-        <footer className="p-4 border-t border-white/40 bg-white/40 backdrop-blur-md text-center">
+        <footer className="p-4 border-t border-white/20 bg-white/20 backdrop-blur-md text-center">
           <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
             © {new Date().getFullYear()} Juan Fernando Agudelo • <span className="text-blue-500">{t.footer}</span>
           </p>
@@ -509,8 +552,16 @@ export default function App() {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: idx * 0.02 }}
-                    className="px-4 py-2.5 bg-white text-slate-700 rounded-2xl text-xs font-bold border border-slate-100 hover:border-blue-400 hover:text-blue-600 transition-all shadow-sm hover:shadow-md"
+                    className="flex items-center gap-2 px-4 py-2.5 bg-white text-slate-700 rounded-2xl text-xs font-bold border border-slate-100 hover:border-blue-400 hover:text-blue-600 transition-all shadow-sm hover:shadow-md group/skill"
                   >
+                    {skillLogos[skill] && (
+                      <img 
+                        src={skillLogos[skill]} 
+                        alt={skill} 
+                        className="w-4 h-4 object-contain group-hover/skill:scale-110 transition-transform"
+                        referrerPolicy="no-referrer"
+                      />
+                    )}
                     {skill}
                   </motion.span>
                 ))}
