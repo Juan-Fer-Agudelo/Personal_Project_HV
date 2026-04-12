@@ -31,18 +31,27 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onClic
       }}
       whileTap={{ scale: 0.98 }}
       onClick={onClick}
-      className={`aspect-square bg-white/60 backdrop-blur-md border border-white/40 rounded-[2rem] md:rounded-[2.5rem] p-4 md:p-7 ${color.hover} transition-all cursor-pointer group flex flex-col justify-between shadow-xl shadow-slate-200/30 perspective-1000`}
+      className={`aspect-square bg-white/60 backdrop-blur-md border border-white/40 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden ${color.hover} transition-all cursor-pointer group flex flex-col shadow-xl shadow-slate-200/30 perspective-1000`}
     >
-      <div className="flex justify-between items-start">
-        <div className={`p-2.5 md:p-3 ${color.bg} rounded-xl md:rounded-2xl ${color.icon} group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-sm`}>
-          {project.icon}
-        </div>
-        <div className="px-2 py-1 bg-slate-100/80 rounded-full text-[8px] md:text-[9px] font-black text-slate-500 uppercase tracking-widest">
-          {project.company}
+      <div className="relative h-1/2 w-full overflow-hidden">
+        <img 
+          src={project.image} 
+          alt={project.title} 
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+        <div className="absolute top-4 left-4 flex justify-between items-start w-[calc(100%-2rem)]">
+          <div className={`p-2.5 md:p-3 ${color.bg} rounded-xl md:rounded-2xl ${color.icon} shadow-lg backdrop-blur-md`}>
+            {project.icon}
+          </div>
+          <div className="px-2 py-1 bg-white/90 backdrop-blur-md rounded-full text-[8px] md:text-[9px] font-black text-slate-600 uppercase tracking-widest shadow-sm">
+            {project.company}
+          </div>
         </div>
       </div>
       
-      <div>
+      <div className="p-4 md:p-6 flex-1 flex flex-col justify-between">
         <h4 className="text-[11px] sm:text-xs md:text-base font-black text-slate-900 mb-1 md:mb-2 group-hover:text-blue-600 transition-colors line-clamp-2 leading-tight">
           {project.title}
         </h4>

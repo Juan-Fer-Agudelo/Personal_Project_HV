@@ -23,4 +23,5 @@ export interface Project {
   date: string;
   company: string;
   icon: ReactNode;
+  image: string;
 }

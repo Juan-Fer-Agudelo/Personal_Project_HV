@@ -132,7 +132,8 @@ export const getProjects = (lang: Language): Project[] => [
     progress: 100,
     date: lang === 'es' ? "Mayo 2025 - Octubre 2025" : "May 2025 - October 2025",
     company: "Renault Sofasa",
-    icon: React.createElement(Users, { className: "w-6 h-6" })
+    icon: React.createElement(Users, { className: "w-6 h-6" }),
+    image: "https://images.unsplash.com/photo-1553028826-f4804a6dba3b?auto=format&fit=crop&w=800&q=80" // Payroll/HR
   },
   {
     id: 2,
@@ -155,7 +156,8 @@ export const getProjects = (lang: Language): Project[] => [
     progress: 100,
     date: lang === 'es' ? "Febrero 2026 - Marzo 2026" : "February 2026 - March 2026",
     company: "Simex",
-    icon: React.createElement(Zap, { className: "w-6 h-6" })
+    icon: React.createElement(Zap, { className: "w-6 h-6" }),
+    image: "https://images.unsplash.com/photo-1611974714851-eb605161ca81?auto=format&fit=crop&w=800&q=80" // Finance/Exchange
   },
   {
     id: 4,
@@ -178,7 +180,8 @@ export const getProjects = (lang: Language): Project[] => [
     progress: 100,
     date: lang === 'es' ? "Octubre 2025 - Diciembre 2025" : "October 2025 - December 2025",
     company: "Renault Sofasa",
-    icon: React.createElement(LineChart, { className: "w-6 h-6" })
+    icon: React.createElement(LineChart, { className: "w-6 h-6" }),
+    image: "https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&w=800&q=80" // Data Analysis
   },
   {
     id: 7,
@@ -201,7 +204,8 @@ export const getProjects = (lang: Language): Project[] => [
     progress: 100,
     date: lang === 'es' ? "Noviembre 2025 - Marzo 2026" : "November 2025 - March 2026",
     company: lang === 'es' ? "Simex / Renault" : "Simex / Renault",
-    icon: React.createElement(FileSpreadsheet, { className: "w-6 h-6" })
+    icon: React.createElement(FileSpreadsheet, { className: "w-6 h-6" }),
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" // ERP/Business
   },
   {
     id: 8,
@@ -223,7 +227,8 @@ export const getProjects = (lang: Language): Project[] => [
     progress: 100,
     date: "2025",
     company: lang === 'es' ? "Innovación TI" : "IT Innovation",
-    icon: React.createElement(Cpu, { className: "w-6 h-6" })
+    icon: React.createElement(Cpu, { className: "w-6 h-6" }),
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" // AI/Copilot
   },
   {
     id: 9,
@@ -246,6 +251,7 @@ export const getProjects = (lang: Language): Project[] => [
     progress: 100,
     date: lang === 'es' ? "Mayo 2025 - Julio 2025" : "May 2025 - July 2025",
     company: lang === 'es' ? "U. Salazar y Herrera" : "Salazar y Herrera University",
-    icon: React.createElement(Users, { className: "w-6 h-6" })
+    icon: React.createElement(Users, { className: "w-6 h-6" }),
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" // Museum/Accessibility
   }
 ];
