@@ -77,7 +77,7 @@ export const Header = ({ t, lang, setLang, setShowAbout, setShowSkills, showCont
                     </div>
                     <span className="truncate font-medium">GitHub</span>
                   </a>
-                  <a href="https://www.linkedin.com/in/juan-fernando-agudelo-475/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-all text-xs text-slate-700 group">
+                  <a href="https://www.linkedin.com/in/juan-fernando-agudelo-861b13264/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-all text-xs text-slate-700 group">
                     <div className="p-1.5 bg-blue-100 rounded-lg group-hover:bg-white transition-colors">
                       <Linkedin className="w-4 h-4 text-blue-600" />
                     </div>

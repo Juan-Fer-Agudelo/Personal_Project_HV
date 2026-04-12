@@ -133,7 +133,7 @@ export const getProjects = (lang: Language): Project[] => [
     date: lang === 'es' ? "Mayo 2025 - Octubre 2025" : "May 2025 - October 2025",
     company: "Renault Sofasa",
     icon: React.createElement(Users, { className: "w-6 h-6" }),
-    image: "https://images.unsplash.com/photo-1553028826-f4804a6dba3b?auto=format&fit=crop&w=800&q=80" // Payroll/HR
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 2,
@@ -157,7 +157,7 @@ export const getProjects = (lang: Language): Project[] => [
     date: lang === 'es' ? "Febrero 2026 - Marzo 2026" : "February 2026 - March 2026",
     company: "Simex",
     icon: React.createElement(Zap, { className: "w-6 h-6" }),
-    image: "https://images.unsplash.com/photo-1611974714851-eb605161ca81?auto=format&fit=crop&w=800&q=80" // Finance/Exchange
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" // Data flow/Automation concept
   },
   {
     id: 4,
@@ -181,7 +181,7 @@ export const getProjects = (lang: Language): Project[] => [
     date: lang === 'es' ? "Octubre 2025 - Diciembre 2025" : "October 2025 - December 2025",
     company: "Renault Sofasa",
     icon: React.createElement(LineChart, { className: "w-6 h-6" }),
-    image: "https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&w=800&q=80" // Data Analysis
+    image: "https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&w=800&q=80" // Dashboard style
   },
   {
     id: 7,
@@ -205,7 +205,7 @@ export const getProjects = (lang: Language): Project[] => [
     date: lang === 'es' ? "Noviembre 2025 - Marzo 2026" : "November 2025 - March 2026",
     company: lang === 'es' ? "Simex / Renault" : "Simex / Renault",
     icon: React.createElement(FileSpreadsheet, { className: "w-6 h-6" }),
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" // ERP/Business
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 8,
@@ -228,7 +228,7 @@ export const getProjects = (lang: Language): Project[] => [
     date: "2025",
     company: lang === 'es' ? "Innovación TI" : "IT Innovation",
     icon: React.createElement(Cpu, { className: "w-6 h-6" }),
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" // AI/Copilot
+    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 9,
@@ -252,6 +252,6 @@ export const getProjects = (lang: Language): Project[] => [
     date: lang === 'es' ? "Mayo 2025 - Julio 2025" : "May 2025 - July 2025",
     company: lang === 'es' ? "U. Salazar y Herrera" : "Salazar y Herrera University",
     icon: React.createElement(Users, { className: "w-6 h-6" }),
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" // Museum/Accessibility
+    image: "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80" // Deep Learning / Neural style
   }
 ];
