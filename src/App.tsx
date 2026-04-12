@@ -66,9 +66,11 @@ const translations = {
     toolUsage: "Uso de Herramientas (%)",
     toolUsageNote: "* Estimación del tiempo y esfuerzo dedicado a cada herramienta durante el desarrollo.",
     footer: "Desarrollado con pasión por la automatización.",
-    switchLang: "English",
+    switchLang: "Translator",
     aboutTitle: "Sobre Mí",
     learnMore: "Conoce más sobre mí",
+    skillsBtn: "Habilidades",
+    contactBtn: "Contacto",
     aboutContent: [
       "Soy un profesional en tecnología con experiencia en análisis de datos, desarrollo de software y automatización de procesos, enfocado en generar impacto real en entornos empresariales. He trabajado en compañías como Renault Sofasa y Simex, donde he liderado y participado en el desarrollo de soluciones tecnológicas que optimizan procesos críticos del negocio.",
       "En Renault, desarrollé aplicaciones que transformaron procesos manuales de alto esfuerzo en soluciones automatizadas, logrando reducciones significativas de tiempo (de horas a minutos) y mejorando la toma de decisiones mediante generación de reportes. En Simex, he implementado automatizaciones con herramientas como n8n y trabajado con ERP como Epicor, integrando datos, optimizando flujos operativos y eliminando tareas manuales repetitivas.",
@@ -92,9 +94,11 @@ const translations = {
     toolUsage: "Tool Usage (%)",
     toolUsageNote: "* Estimated time and effort dedicated to each tool during development.",
     footer: "Developed with passion for automation.",
-    switchLang: "Español",
+    switchLang: "Translator",
     aboutTitle: "About Me",
     learnMore: "Learn more about me",
+    skillsBtn: "Skills",
+    contactBtn: "Contact",
     aboutContent: [
       "I am a technology professional with experience in data analysis, software development, and process automation, focused on generating real impact in business environments. I have worked in companies such as Renault Sofasa and Simex, where I have led and participated in the development of technological solutions that optimize critical business processes.",
       "At Renault, I developed applications that transformed high-effort manual processes into automated solutions, achieving significant time reductions (from hours to minutes) and improving decision-making through report generation. At Simex, I have implemented automations with tools like n8n and worked with ERPs like Epicor, integrating data, optimizing operational flows, and eliminating repetitive manual tasks.",
@@ -257,160 +261,193 @@ const getProjects = (lang: Language): Project[] => [
 export default function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [showAbout, setShowAbout] = useState(false);
+  const [showSkills, setShowSkills] = useState(false);
+  const [showContact, setShowContact] = useState(false);
   const [lang, setLang] = useState<Language>('es');
 
-  const t = translations[lang];
+  const t = (translations[lang] as any);
   const projects = getProjects(lang);
 
   return (
-    <div className="h-screen bg-[#0a0a0c] text-slate-200 font-sans selection:bg-blue-500/30 overflow-hidden flex flex-col md:flex-row">
-      {/* Sidebar / Profile Section */}
-      <aside className="w-full md:w-80 lg:w-96 border-r border-slate-800/50 bg-slate-900/20 backdrop-blur-md flex flex-col h-full overflow-y-auto custom-scrollbar">
-        <div className="p-8 flex flex-col items-center text-center md:items-start md:text-left">
-          <motion.div 
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className="relative mb-6"
-          >
+    <div className="h-screen bg-[#0a0a0c] text-slate-200 font-sans selection:bg-blue-500/30 overflow-hidden flex flex-col">
+      {/* Top Navigation Bar */}
+      <header className="h-16 border-b border-slate-800/50 bg-slate-900/40 backdrop-blur-xl flex items-center justify-between px-6 z-50">
+        <div className="flex items-center gap-3">
+          <div className="relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-25"></div>
             <img 
               src="https://media.licdn.com/dms/image/v2/D4E03AQF1bhRXulHxNA/profile-displayphoto-scale_200_200/B4EZsWSPPGIUAY-/0/1765605440434?e=2147483647&v=beta&t=6ZX5tjiWuqgAODt3WzDZYo-w6B9PqqP46_9QoI2oai0" 
               alt="Juan Fernando Agudelo" 
               referrerPolicy="no-referrer"
-              className="relative w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-2 border-slate-800 shadow-2xl"
+              className="relative w-8 h-8 rounded-full object-cover border border-slate-700"
             />
-          </motion.div>
-
-          <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">
-            Juan Fernando Agudelo
-          </h1>
-          <p className="text-sm text-blue-400 font-medium mb-8 leading-relaxed">
-            {t.role}
-          </p>
-
-          <div className="w-full space-y-3 mb-8">
-            <button 
-              onClick={() => setShowAbout(true)}
-              className="flex items-center gap-3 p-3 rounded-xl bg-blue-500/10 border border-blue-500/30 hover:bg-blue-500/20 transition-all text-sm w-full text-blue-400 font-bold"
-            >
-              <Info className="w-4 h-4" />
-              <span className="truncate">{t.learnMore}</span>
-            </button>
-            <a href="https://github.com/Juan-Fer-Agudelo" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-xl bg-slate-800/30 border border-slate-800 hover:border-blue-500/50 transition-all text-sm w-full">
-              <Github className="w-4 h-4 text-slate-400" />
-              <span className="truncate">GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/juan-fernando-agudelo-475/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-xl bg-slate-800/30 border border-slate-800 hover:border-blue-500/50 transition-all text-sm w-full">
-              <Linkedin className="w-4 h-4 text-slate-400" />
-              <span className="truncate">LinkedIn</span>
-            </a>
-            <a href="mailto:juanferagudelo475@gmail.com" className="flex items-center gap-3 p-3 rounded-xl bg-slate-800/30 border border-slate-800 hover:border-blue-500/50 transition-all text-sm w-full">
-              <Mail className="w-4 h-4 text-slate-400" />
-              <span className="truncate">juanferagudelo475@gmail.com</span>
-            </a>
-            <a href="tel:+57306718793" className="flex items-center gap-3 p-3 rounded-xl bg-slate-800/30 border border-slate-800 hover:border-blue-500/50 transition-all text-sm w-full">
-              <Phone className="w-4 h-4 text-slate-400" />
-              <span className="truncate">306718793</span>
-            </a>
           </div>
-
-          <div className="w-full">
-            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">{t.skillsTitle}</h3>
-            <div className="flex flex-wrap gap-1.5">
-              {t.skills.slice(0, 15).map(skill => (
-                <span key={skill} className="px-2 py-1 bg-slate-800/50 text-slate-400 rounded-md text-[10px] border border-slate-700/50">
-                  {skill}
-                </span>
-              ))}
-              <span className="px-2 py-1 bg-blue-500/10 text-blue-400 rounded-md text-[10px] border border-blue-500/20 font-bold">
-                +{t.skills.length - 15}
-              </span>
-            </div>
-          </div>
+          <h1 className="text-sm font-bold text-white hidden sm:block">Juan Fernando Agudelo</h1>
         </div>
 
-        <div className="mt-auto p-8 border-t border-slate-800/50">
+        <nav className="flex items-center gap-2">
+          <button 
+            onClick={() => setShowAbout(true)}
+            className="p-2 md:px-4 md:py-2 rounded-lg bg-blue-500/10 border border-blue-500/20 hover:bg-blue-500/20 transition-all text-[10px] md:text-xs text-blue-400 font-bold flex items-center gap-2"
+          >
+            <Info className="w-3.5 h-3.5" />
+            <span className="hidden md:inline">{t.learnMore}</span>
+          </button>
+
+          <button 
+            onClick={() => setShowSkills(true)}
+            className="p-2 md:px-4 md:py-2 rounded-lg bg-slate-800/50 border border-slate-700 hover:border-blue-500/50 transition-all text-[10px] md:text-xs text-slate-300 font-bold flex items-center gap-2"
+          >
+            <Cpu className="w-3.5 h-3.5" />
+            <span className="hidden md:inline">{t.skillsBtn}</span>
+          </button>
+
+          <div className="relative">
+            <button 
+              onClick={() => setShowContact(!showContact)}
+              className="p-2 md:px-4 md:py-2 rounded-lg bg-slate-800/50 border border-slate-700 hover:border-blue-500/50 transition-all text-[10px] md:text-xs text-slate-300 font-bold flex items-center gap-2"
+            >
+              <Users className="w-3.5 h-3.5" />
+              <span className="hidden md:inline">{t.contactBtn}</span>
+            </button>
+
+            <AnimatePresence>
+              {showContact && (
+                <>
+                  <div className="fixed inset-0 z-10" onClick={() => setShowContact(false)} />
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    className="absolute right-0 mt-2 w-64 bg-slate-900 border border-slate-800 rounded-xl shadow-2xl p-2 z-20"
+                  >
+                    <a href="https://github.com/Juan-Fer-Agudelo" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-800 transition-all text-xs">
+                      <Github className="w-4 h-4 text-slate-400" />
+                      <span className="truncate">GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/juan-fernando-agudelo-475/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-800 transition-all text-xs">
+                      <Linkedin className="w-4 h-4 text-slate-400" />
+                      <span className="truncate">LinkedIn</span>
+                    </a>
+                    <a href="mailto:juanferagudelo475@gmail.com" className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-800 transition-all text-xs">
+                      <Mail className="w-4 h-4 text-slate-400" />
+                      <span className="truncate">juanferagudelo475@gmail.com</span>
+                    </a>
+                    <a href="tel:+57306718793" className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-800 transition-all text-xs">
+                      <Phone className="w-4 h-4 text-slate-400" />
+                      <span className="truncate">306718793</span>
+                    </a>
+                  </motion.div>
+                </>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <div className="h-6 w-px bg-slate-800 mx-2" />
+
           <button 
             onClick={() => setLang(lang === 'es' ? 'en' : 'es')}
-            className="w-full px-4 py-2 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-bold hover:bg-blue-500/20 transition-all uppercase tracking-widest"
+            className="px-3 py-1.5 rounded-lg bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[10px] font-bold hover:bg-blue-500/20 transition-all uppercase tracking-widest"
           >
             {t.switchLang}
           </button>
-        </div>
-      </aside>
+        </nav>
+      </header>
 
       {/* Main Dashboard Content */}
       <main className="flex-1 flex flex-col overflow-hidden bg-[#0a0a0c]">
-        {/* Top Bar / Stats */}
-        <div className="p-6 border-b border-slate-800/50 flex items-center justify-between bg-slate-900/10">
-          <div className="flex items-center gap-4">
-            <h2 className="text-xl font-bold text-white">{t.featuredProjects}</h2>
-            <div className="h-4 w-px bg-slate-800" />
-            <div className="flex gap-2">
-              {t.interests.slice(0, 3).map(interest => (
-                <span key={interest} className="hidden lg:inline-block px-3 py-1 bg-blue-500/5 text-blue-400/70 rounded-full text-[10px] border border-blue-500/10">
-                  {interest}
-                </span>
+        {/* Bento Grid Layout - Projects Only */}
+        <div className="flex-1 overflow-y-auto p-4 md:p-8 custom-scrollbar">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+              {projects.map((project, index) => (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.05 }}
+                  whileHover={{ y: -4, scale: 1.02 }}
+                  onClick={() => setSelectedProject(project)}
+                  className="aspect-square bg-slate-900/40 border border-slate-800 rounded-2xl p-4 md:p-6 hover:bg-slate-900/60 transition-all cursor-pointer group flex flex-col justify-between"
+                >
+                  <div className="flex justify-between items-start">
+                    <div className="p-2 bg-blue-500/10 rounded-xl text-blue-400 group-hover:scale-110 transition-transform">
+                      {project.icon}
+                    </div>
+                    <div className="text-[8px] md:text-[10px] font-bold text-slate-500 uppercase tracking-tighter">
+                      {project.company}
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-xs md:text-sm font-bold text-white mb-1 group-hover:text-blue-400 transition-colors line-clamp-2">
+                      {project.title}
+                    </h4>
+                    <div className="h-1 w-full bg-slate-800 rounded-full overflow-hidden mt-3">
+                      <motion.div 
+                        initial={{ width: 0 }}
+                        animate={{ width: `${project.progress}%` }}
+                        className="h-full bg-blue-500" 
+                      />
+                    </div>
+                  </div>
+                </motion.div>
               ))}
             </div>
-          </div>
-          <Settings className="w-5 h-5 text-slate-600 animate-spin-slow" />
-        </div>
-
-        {/* Bento Grid Layout */}
-        <div className="flex-1 overflow-y-auto p-6 custom-scrollbar">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-            
-            {/* Projects Grid */}
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.05 }}
-                whileHover={{ y: -4 }}
-                onClick={() => setSelectedProject(project)}
-                className="bg-slate-900/40 border border-slate-800 rounded-2xl p-5 hover:bg-slate-900/60 transition-all cursor-pointer group flex flex-col"
-              >
-                <div className="flex justify-between items-start mb-4">
-                  <div className="p-2.5 bg-blue-500/10 rounded-lg text-blue-400">
-                    {project.icon}
-                  </div>
-                  <div className="text-[10px] font-bold text-slate-500 uppercase tracking-tighter">
-                    {project.company}
-                  </div>
-                </div>
-                <h4 className="text-md font-bold text-white mb-2 group-hover:text-blue-400 transition-colors line-clamp-1">
-                  {project.title}
-                </h4>
-                <p className="text-slate-500 text-xs leading-relaxed mb-4 line-clamp-2">
-                  {project.description}
-                </p>
-                
-                <div className="mt-auto pt-4 border-t border-slate-800/50">
-                  <div className="flex justify-between items-center text-[10px] mb-2">
-                    <span className="text-slate-500">{t.progreso}</span>
-                    <span className="text-blue-400 font-bold">{project.progress}%</span>
-                  </div>
-                  <div className="h-1 w-full bg-slate-800 rounded-full overflow-hidden">
-                    <div className="h-full bg-blue-500" style={{ width: `${project.progress}%` }} />
-                  </div>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </div>
 
         {/* Footer Bar */}
-        <footer className="p-4 border-t border-slate-800/50 bg-slate-900/20 text-center">
-          <p className="text-[10px] text-slate-600">
+        <footer className="p-3 border-t border-slate-800/50 bg-slate-900/20 text-center">
+          <p className="text-[9px] text-slate-600">
             © {new Date().getFullYear()} Juan Fernando Agudelo • {t.footer}
           </p>
         </footer>
       </main>
 
-      {/* Modal Section */}
+      {/* Modals Section */}
       <AnimatePresence>
+        {/* Skills Modal */}
+        {showSkills && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowSkills(false)}
+              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              className="relative w-full max-w-2xl bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl p-8 flex flex-col max-h-[80vh]"
+            >
+              <button 
+                onClick={() => setShowSkills(false)}
+                className="absolute top-6 right-6 p-2 bg-slate-800 hover:bg-slate-700 rounded-full text-slate-400 hover:text-white transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-3 bg-blue-500/10 rounded-2xl text-blue-400">
+                  <Cpu className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">{t.skillsTitle}</h3>
+              </div>
+
+              <div className="flex flex-wrap gap-2 overflow-y-auto custom-scrollbar pr-2">
+                {t.skills.map((skill: string) => (
+                  <span key={skill} className="px-3 py-2 bg-slate-800/50 text-slate-300 rounded-xl text-xs border border-slate-700/50 hover:border-blue-500/50 transition-colors">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        )}
+
         {showAbout && (
           <div className="fixed inset-0 z-[100] flex justify-end">
             <motion.div
@@ -442,7 +479,7 @@ export default function App() {
               </div>
 
               <div className="space-y-6 overflow-y-auto custom-scrollbar pr-4 flex-1">
-                {t.aboutContent.map((paragraph, idx) => (
+                {t.aboutContent.map((paragraph: string, idx: number) => (
                   <p key={idx} className="text-slate-300 leading-relaxed text-sm">
                     {paragraph}
                   </p>
@@ -451,7 +488,7 @@ export default function App() {
                 <div className="pt-6 border-t border-slate-800">
                   <h4 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">{t.interestsTitle}</h4>
                   <div className="flex flex-wrap gap-2">
-                    {t.interests.map(interest => (
+                    {t.interests.map((interest: string) => (
                       <span key={interest} className="px-3 py-1.5 bg-blue-500/5 text-blue-300 rounded-lg text-[10px] border border-blue-500/20">
                         {interest}
                       </span>
