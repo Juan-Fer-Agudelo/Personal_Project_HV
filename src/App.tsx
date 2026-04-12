@@ -74,12 +74,12 @@ const translations = {
     aboutContent: [
       "Soy un profesional en tecnología con experiencia en análisis de datos, desarrollo de software y automatización de procesos, enfocado en generar impacto real en entornos empresariales. He trabajado en compañías como Renault Sofasa y Simex, donde he liderado y participado en el desarrollo de soluciones tecnológicas que optimizan procesos críticos del negocio.",
       "En Renault, desarrollé aplicaciones que transformaron procesos manuales de alto esfuerzo en soluciones automatizadas, logrando reducciones significativas de tiempo (de horas a minutos) y mejorando la toma de decisiones mediante generación de reportes. En Simex, he implementado automatizaciones con herramientas como n8n y trabajado con ERP como Epicor, integrando datos, optimizando flujos operativos y eliminando tareas manuales repetitivas.",
-      "Cuento con conocimientos sólidos en SQL avanzado, Python, Power BI, desarrollo con React y .NET, así como en integración de APIs y uso de herramientas de inteligencia artificial aplicadas al negocio. Me caracterizo por una mentalidad analítica, enfoque en resultados y la capacidad de conectar la tecnología con las necesidades reales de la organización, convirtiendo datos y procesos en soluciones eficientes y escalables."
+      "Cuento con conocimientos sólidos en SQL avanzado, Python, Power BI, desarrollo con frameworks como React, Vue.js y Nuxt.js, así como en .NET, integración de APIs y uso de herramientas de inteligencia artificial aplicadas al negocio. Me caracterizo por una mentalidad analítica, enfoque en resultados y la capacidad de conectar la tecnología con las necesidades reales de la organización, convirtiendo datos y procesos en soluciones eficientes y escalables."
     ],
     interestsTitle: "Intereses",
     interests: ["Análisis de datos", "Inteligencia artificial", "Software", "Programación orientada a objetos", "Bases de datos", "Transformación digital", "Business Intelligence", "Cloud Computing"],
     skillsTitle: "Habilidades",
-    skills: ["Python", "Html", "Css", "JavaScript", "Node.js", "TypeScript", "React", ".Net", "SQL", "C#", "C++", "Java", "Php", "Bash", "MongoDB", "LookerDB", "Docker", "N8N", "Power Automate", "Power Apps", "Excel", "Sharepoint", "Copilot studio", "Figma", "Visual Studio Code", "Visual Studio Community", "Ubuntu", "CentOS", "Linux Mint"]
+    skills: ["Python", "Html", "Css", "JavaScript", "Node.js", "TypeScript", "React", "Vue.js", "Nuxt.js", "Vite", ".Net", "SQL", "C#", "C++", "Java", "Php", "Bash", "MongoDB", "LookerDB", "Docker", "N8N", "Power Automate", "Power Apps", "Excel", "Sharepoint", "Copilot studio", "Figma", "Visual Studio Code", "Visual Studio Community", "Ubuntu", "CentOS", "Linux Mint", "Scrum", "Jira", "Looker", "Looker Studio", "SAP", "SAP Business One", "Dash"]
   },
   en: {
     role: "Software Development / Data & Automation Specialist",
@@ -102,23 +102,23 @@ const translations = {
     aboutContent: [
       "I am a technology professional with experience in data analysis, software development, and process automation, focused on generating real impact in business environments. I have worked in companies such as Renault Sofasa and Simex, where I have led and participated in the development of technological solutions that optimize critical business processes.",
       "At Renault, I developed applications that transformed high-effort manual processes into automated solutions, achieving significant time reductions (from hours to minutes) and improving decision-making through report generation. At Simex, I have implemented automations with tools like n8n and worked with ERPs like Epicor, integrating data, optimizing operational flows, and eliminating repetitive manual tasks.",
-      "I have solid knowledge in advanced SQL, Python, Power BI, development with React and .NET, as well as API integration and the use of artificial intelligence tools applied to business. I am characterized by an analytical mindset, focus on results, and the ability to connect technology with the real needs of the organization, converting data and processes into efficient and scalable solutions."
+      "I have solid knowledge in advanced SQL, Python, Power BI, development with frameworks like React, Vue.js, and Nuxt.js, as well as .NET, API integration, and the use of artificial intelligence tools applied to business. I am characterized by an analytical mindset, focus on results, and the ability to connect technology with the real needs of the organization, converting data and processes into efficient and scalable solutions."
     ],
     interestsTitle: "Interests",
     interests: ["Data Analysis", "Artificial Intelligence", "Software", "Object-Oriented Programming", "Databases", "Digital Transformation", "Business Intelligence", "Cloud Computing"],
     skillsTitle: "Skills",
-    skills: ["Python", "Html", "Css", "JavaScript", "Node.js", "TypeScript", "React", ".Net", "SQL", "C#", "C++", "Java", "Php", "Bash", "MongoDB", "LookerDB", "Docker", "N8N", "Power Automate", "Power Apps", "Excel", "Sharepoint", "Copilot studio", "Figma", "Visual Studio Code", "Visual Studio Community", "Ubuntu", "CentOS", "Linux Mint"]
+    skills: ["Python", "Html", "Css", "JavaScript", "Node.js", "TypeScript", "React", "Vue.js", "Nuxt.js", "Vite", ".Net", "SQL", "C#", "C++", "Java", "Php", "Bash", "MongoDB", "LookerDB", "Docker", "N8N", "Power Automate", "Power Apps", "Excel", "Sharepoint", "Copilot studio", "Figma", "Visual Studio Code", "Visual Studio Community", "Ubuntu", "CentOS", "Linux Mint", "Scrum", "Jira", "Looker", "Looker Studio", "SAP", "SAP Business One", "Dash"]
   }
 };
 
 const getProjects = (lang: Language): Project[] => [
   {
     id: 1,
-    title: lang === 'es' ? "Aplicación de Cambios de Estructura" : "Structure Change Application",
-    description: lang === 'es' ? "Aplicativo móvil para gestionar cambios organizacionales críticos en planta." : "Mobile app to manage critical organizational changes in the plant.",
+    title: lang === 'es' ? "Aplicación de Cambios de Estructura y Nómina" : "Structure and Payroll Change Application",
+    description: lang === 'es' ? "Aplicativo móvil para gestionar cambios organizacionales y novedades de nómina críticos en planta." : "Mobile app to manage critical organizational changes and payroll news in the plant.",
     fullDescription: lang === 'es' 
-      ? "Desarrollé una solución en React Native para automatizar la gestión de la estructura organizacional. El impacto fue masivo, reduciendo un proceso manual de 14 horas a solo 6 minutos, eliminando errores y mejorando la agilidad en la toma de decisiones para jefes de área."
-      : "I developed a React Native solution to automate organizational structure management. The impact was massive, reducing a 14-hour manual process to just 6 minutes, eliminating errors and improving decision-making agility for area managers.",
+      ? "Desarrollé una solución en React Native para automatizar la gestión de la estructura organizacional y novedades de nómina. El impacto fue masivo, reduciendo procesos manuales de hasta 14 horas a solo minutos (reducción del 99%), eliminando errores y beneficiando a más de 12 áreas críticas incluyendo RRHH y Producción."
+      : "I developed a React Native solution to automate organizational structure management and payroll news. The impact was massive, reducing manual processes of up to 14 hours to just minutes (99% reduction), eliminating errors and benefiting more than 12 critical areas including HR and Production.",
     technologies: ["React Native", "TypeScript", "Node.js", "SQL Server"],
     toolUsage: [
       { name: "React Native", value: 95 },
@@ -126,7 +126,7 @@ const getProjects = (lang: Language): Project[] => [
       { name: "SQL Server", value: 60 }
     ],
     progress: 100,
-    date: lang === 'es' ? "Octubre 2025" : "October 2025",
+    date: lang === 'es' ? "Mayo 2025 - Octubre 2025" : "May 2025 - October 2025",
     company: "Renault Sofasa",
     icon: <Users className="w-6 h-6" />
   },
@@ -144,98 +144,44 @@ const getProjects = (lang: Language): Project[] => [
       { name: "Logic", value: 70 }
     ],
     progress: 100,
-    date: "2024",
+    date: lang === 'es' ? "Febrero 2026 - Marzo 2026" : "February 2026 - March 2026",
     company: "Simex",
     icon: <Zap className="w-6 h-6" />
   },
   {
-    id: 3,
-    title: lang === 'es' ? "Aplicación de Cambios de Nómina" : "Payroll Change Application",
-    description: lang === 'es' ? "Sistema de gestión de novedades de nómina con impacto en 12+ áreas organizacionales." : "Payroll news management system with impact on 12+ organizational areas.",
-    fullDescription: lang === 'es'
-      ? "Creé un sistema centralizado para gestionar cambios de nómina con una interfaz intuitiva. Logré optimizar un proceso que tomaba 2 horas a tan solo 1 minuto, beneficiando a más de 12 áreas críticas incluyendo RRHH y Producción."
-      : "I created a centralized system to manage payroll changes with an intuitive interface. I managed to optimize a process that took 2 hours to just 1 minute, benefiting more than 12 critical areas including HR and Production.",
-    technologies: ["Software Dev", "UI/UX", "Database", "Automation"],
-    toolUsage: [
-      { name: "Development", value: 85 },
-      { name: "Database", value: 70 },
-      { name: "UI Design", value: 60 }
-    ],
-    progress: 100,
-    date: "2024",
-    company: "Renault",
-    icon: <Code2 className="w-6 h-6" />
-  },
-  {
     id: 4,
-    title: lang === 'es' ? "Análisis de Datos y Métricas" : "Data Analysis and Metrics",
-    description: lang === 'es' ? "Construcción de indicadores operativos y modelos de consumo de datos." : "Construction of operational indicators and data consumption models.",
+    title: lang === 'es' ? "Análisis de Datos Simétricos y Estadísticos" : "Symmetrical and Statistical Data Analysis",
+    description: lang === 'es' ? "Estructuración de tableros analíticos comprensibles para la toma de decisiones estratégicas." : "Structuring understandable analytical dashboards for strategic decision-making.",
     fullDescription: lang === 'es'
-      ? "Como Data Analyst, trabajé con grandes volúmenes de datos de consumo y operación. Construí tableros de métricas e indicadores clave que sirvieron de base para decisiones estratégicas de la gerencia de planta."
-      : "As a Data Analyst, I worked with large volumes of consumption and operation data. I built metric dashboards and key indicators that served as a basis for strategic decisions by the plant management.",
-    technologies: ["SQL", "Data Analysis", "Statistics", "Visualization"],
+      ? "Lideré la reorganización de tableros estadísticos y de análisis de datos para transformarlos en herramientas intuitivas y comprensibles, diseñadas específicamente para perfiles no técnicos como psicólogos de selección. Utilicé herramientas como Power BI, Looker Studio y Dash para presentar métricas complejas de forma clara, facilitando la evaluación de candidatos y el seguimiento de KPIs operativos."
+      : "I led the reorganization of statistical and data analysis dashboards to transform them into intuitive and understandable tools, specifically designed for non-technical profiles such as selection psychologists. I used tools like Power BI, Looker Studio, and Dash to present complex metrics clearly, facilitating candidate evaluation and operational KPI monitoring.",
+    technologies: ["Power BI", "Looker Studio", "Dash", "SQL", "Statistics"],
     toolUsage: [
-      { name: "SQL", value: 90 },
-      { name: "Analysis", value: 85 },
-      { name: "Reporting", value: 75 }
+      { name: "Power BI", value: 90 },
+      { name: "Looker Studio", value: 85 },
+      { name: "Dash", value: 70 }
     ],
     progress: 100,
-    date: "2023-2024",
+    date: lang === 'es' ? "Octubre 2025 - Diciembre 2025" : "October 2025 - December 2025",
     company: "Renault Sofasa",
     icon: <LineChart className="w-6 h-6" />
   },
   {
-    id: 5,
-    title: lang === 'es' ? "Soluciones TI y ERP Epicor" : "IT Solutions and Epicor ERP",
-    description: lang === 'es' ? "Automatización de procesos internos y soporte avanzado de sistemas ERP." : "Automation of internal processes and advanced support for ERP systems.",
-    fullDescription: lang === 'es'
-      ? "Especialista en la mejora de sistemas ERP (Epicor), realizando consultas avanzadas en SQL Server y desarrollando scripts en Python para automatizar procesos internos de la compañía, posicionándome como el puente entre TI y Operaciones."
-      : "Specialist in the improvement of ERP systems (Epicor), performing advanced queries in SQL Server and developing Python scripts to automate internal company processes, positioning myself as the bridge between IT and Operations.",
-    technologies: ["SQL Server", "Python", "Epicor ERP", "n8n"],
-    toolUsage: [
-      { name: "SQL Server", value: 95 },
-      { name: "Python", value: 70 },
-      { name: "ERP Logic", value: 80 }
-    ],
-    progress: 100,
-    date: "2024",
-    company: "Simex",
-    icon: <Settings className="w-6 h-6" />
-  },
-  {
-    id: 6,
-    title: lang === 'es' ? "Integración y Consumo de APIs" : "API Integration and Consumption",
-    description: lang === 'es' ? "Desarrollo de integraciones robustas entre sistemas heterogéneos." : "Development of robust integrations between heterogeneous systems.",
-    fullDescription: lang === 'es'
-      ? "Experto en el consumo de servicios externos y la integración de sistemas mediante APIs REST. Utilizo Postman y Swagger para el testeo y documentación de flujos de datos automatizados que conectan diferentes plataformas empresariales."
-      : "Expert in the consumption of external services and the integration of systems through REST APIs. I use Postman and Swagger for testing and documenting automated data flows that connect different business platforms.",
-    technologies: ["Postman", "Swagger", "REST APIs", "Integration"],
-    toolUsage: [
-      { name: "Postman", value: 90 },
-      { name: "API Design", value: 85 },
-      { name: "Testing", value: 70 }
-    ],
-    progress: 100,
-    date: "2024",
-    company: "Simex / Renault",
-    icon: <Network className="w-6 h-6" />
-  },
-  {
     id: 7,
-    title: lang === 'es' ? "Reportes Empresariales Avanzados" : "Advanced Business Reporting",
-    description: lang === 'es' ? "Creación de dashboards ejecutivos y seguimiento de KPIs gerenciales." : "Creation of executive dashboards and monitoring of management KPIs.",
+    title: lang === 'es' ? "Inteligencia de Negocios y ERP (SAP/Epicor)" : "Business Intelligence and ERP (SAP/Epicor)",
+    description: lang === 'es' ? "Integración de datos financieros y operativos desde sistemas SAP y Epicor." : "Integration of financial and operational data from SAP and Epicor systems.",
     fullDescription: lang === 'es'
-      ? "Desarrollo de reportes complejos utilizando SSRS y Power BI. Mi enfoque está en la claridad visual y la precisión de los datos para permitir un seguimiento efectivo de los indicadores clave de rendimiento (KPIs) a nivel gerencial."
-      : "Development of complex reports using SSRS and Power BI. My focus is on visual clarity and data precision to allow effective monitoring of key performance indicators (KPIs) at the management level.",
-    technologies: ["SSRS", "Power BI", "DAX", "Reporting Services"],
+      ? "Desarrollo de ecosistemas de reportes avanzados integrando datos de ERPs líderes como SAP, SAP Business One y Epicor (en Simex). Mi trabajo se centró en la creación de dashboards ejecutivos en Power BI y Looker que permiten una visibilidad total de la cadena de valor, optimizando los tiempos de respuesta de la gerencia mediante datos precisos y visualizaciones de alto impacto."
+      : "Development of advanced reporting ecosystems integrating data from leading ERPs such as SAP, SAP Business One, and Epicor (at Simex). My work focused on creating executive dashboards in Power BI and Looker that allow full visibility of the value chain, optimizing management response times through precise data and high-impact visualizations.",
+    technologies: ["SAP", "Epicor", "Power BI", "Looker", "SSRS"],
     toolUsage: [
-      { name: "Power BI", value: 95 },
-      { name: "SSRS", value: 80 },
-      { name: "DAX", value: 75 }
+      { name: "ERP Integration", value: 95 },
+      { name: "Power BI", value: 90 },
+      { name: "Looker", value: 80 }
     ],
     progress: 100,
-    date: "2023-2024",
-    company: lang === 'es' ? "Empresarial" : "Corporate",
+    date: lang === 'es' ? "Noviembre 2025 - Marzo 2026" : "November 2025 - March 2026",
+    company: lang === 'es' ? "Simex / Renault" : "Simex / Renault",
     icon: <FileSpreadsheet className="w-6 h-6" />
   },
   {
@@ -255,6 +201,24 @@ const getProjects = (lang: Language): Project[] => [
     date: "2025",
     company: lang === 'es' ? "Innovación TI" : "IT Innovation",
     icon: <Cpu className="w-6 h-6" />
+  },
+  {
+    id: 9,
+    title: lang === 'es' ? "Asistente Bambini: Inclusión Visual con IA" : "Bambini Assistant: Visual Inclusion with AI",
+    description: lang === 'es' ? "Asistente de voz inteligente para mejorar la experiencia de personas con discapacidad visual en museos." : "Intelligent voice assistant to improve the experience of visually impaired people in museums.",
+    fullDescription: lang === 'es'
+      ? "Proyecto de investigación desarrollado en la Universidad Salazar y Herrera. Bambini es un asistente de IA diseñado para actuar como intérprete visual en museos y sitios turísticos de Colombia. Utiliza visión artificial para describir detalladamente obras de arte, cuadros y lienzos, permitiendo que personas con discapacidad visual o baja visión tengan una experiencia inmersiva y educativa."
+      : "Research project developed at Universidad Salazar y Herrera. Bambini is an AI assistant designed to act as a visual interpreter in museums and tourist sites in Colombia. It uses computer vision to describe artworks, paintings, and canvases in detail, allowing visually impaired or low-vision people to have an immersive and educational experience.",
+    technologies: ["Generative AI", "Computer Vision", "Voice Synthesis", "Accessibility"],
+    toolUsage: [
+      { name: "AI Vision", value: 95 },
+      { name: "Voice UI", value: 90 },
+      { name: "Research", value: 85 }
+    ],
+    progress: 100,
+    date: lang === 'es' ? "Mayo 2025 - Julio 2025" : "May 2025 - July 2025",
+    company: lang === 'es' ? "U. Salazar y Herrera" : "Salazar y Herrera University",
+    icon: <Users className="w-6 h-6" />
   }
 ];
 
