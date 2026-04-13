@@ -4,7 +4,8 @@ import {
   Zap, 
   LineChart, 
   FileSpreadsheet, 
-  Cpu 
+  Cpu,
+  Globe
 } from "lucide-react";
 import { Project, Language } from "./types";
 
@@ -253,5 +254,29 @@ export const getProjects = (lang: Language): Project[] => [
     company: lang === 'es' ? "U. Salazar y Herrera" : "Salazar y Herrera University",
     icon: React.createElement(Users, { className: "w-6 h-6" }),
     image: "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80" // Deep Learning / Neural style
+  },
+  {
+    id: 10,
+    title: lang === 'es' ? "Sitio Web Oficial - Empresa Contadoras AQ" : "Official Website - Contadoras AQ Company",
+    description: lang === 'es' ? "Desarrollo y despliegue de la plataforma web oficial para la empresa de contaduría Contadoras AQ." : "Development and deployment of the official web platform for the accounting company Contadoras AQ.",
+    fullDescription: lang === 'es'
+      ? "Diseñé y desarrollé el sitio web oficial de la empresa Contadoras AQ utilizando React y Next.js para garantizar un rendimiento óptimo y SEO. El despliegue se realizó en Vercel, integrando un dominio corporativo pre-adquirido de forma anual. La plataforma sirve como el canal principal de comunicación y servicios digitales de la empresa, proyectando una imagen profesional y moderna."
+      : "I designed and developed the official website for the company Contadoras AQ using React and Next.js to ensure optimal performance and SEO. The deployment was carried out on Vercel, integrating a pre-acquired corporate domain on an annual basis. The platform serves as the company's main communication and digital services channel, projecting a professional and modern image.",
+    technologies: [
+      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+      { name: "Vercel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" },
+      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" }
+    ],
+    toolUsage: [
+      { name: "Next.js", value: 90 },
+      { name: "React", value: 85 },
+      { name: "Vercel", value: 70 }
+    ],
+    progress: 100,
+    date: lang === 'es' ? "Marzo 2026 - Abril 2026" : "March 2026 - April 2026",
+    company: "Contadoras AQ",
+    icon: React.createElement(Globe, { className: "w-6 h-6" }),
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" // Business meeting
   }
 ];
