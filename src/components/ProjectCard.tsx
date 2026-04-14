@@ -41,20 +41,27 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onClic
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-        <div className="absolute top-4 left-4 flex justify-between items-start w-[calc(100%-2rem)]">
+        <div className="absolute top-4 left-4">
           <div className={`p-2.5 md:p-3 ${color.bg} rounded-xl md:rounded-2xl ${color.icon} shadow-lg backdrop-blur-md`}>
             {project.icon}
-          </div>
-          <div className="px-2 py-1 bg-white/90 backdrop-blur-md rounded-full text-[8px] md:text-[9px] font-black text-slate-600 uppercase tracking-widest shadow-sm">
-            {project.company}
           </div>
         </div>
       </div>
       
       <div className="p-4 md:p-6 flex-1 flex flex-col justify-between">
-        <h4 className="text-[11px] sm:text-xs md:text-base font-black text-slate-900 mb-1 md:mb-2 group-hover:text-blue-600 transition-colors line-clamp-2 leading-tight">
-          {project.title}
-        </h4>
+        <div>
+          <h4 className="text-[11px] sm:text-xs md:text-base font-black text-slate-900 mb-1 md:mb-2 group-hover:text-blue-600 transition-colors line-clamp-2 leading-tight">
+            {project.title}
+          </h4>
+          <div className="flex flex-col gap-0.5">
+            <p className="text-[9px] md:text-[10px] font-black text-blue-600 uppercase tracking-widest">
+              {project.company}
+            </p>
+            <p className="text-[8px] md:text-[9px] font-bold text-slate-500 uppercase tracking-wider">
+              {project.date}
+            </p>
+          </div>
+        </div>
         <div className="h-1.5 md:h-2 w-full bg-slate-100/50 rounded-full overflow-hidden mt-1 md:mt-2 p-0.5">
           <motion.div 
             initial={{ width: 0 }}
