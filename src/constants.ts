@@ -36,7 +36,7 @@ export const translations = {
     interestsTitle: "Intereses",
     interests: ["Análisis de datos", "Inteligencia artificial", "Software", "Programación orientada a objetos", "Bases de datos", "Transformación digital", "Business Intelligence", "Cloud Computing"],
     skillsTitle: "Habilidades",
-    skills: ["Python", "Html", "Css", "JavaScript", "Node.js", "TypeScript", "React", "Vue.js", "Nuxt.js", "Vite", "Power BI", ".Net", "SQL", "C#", "C++", "Java", "Php", "Bash", "MongoDB", "LookerDB", "Docker", "N8N", "Power Automate", "Power Apps", "Excel", "Sharepoint", "Copilot studio", "Figma", "Visual Studio Code", "Visual Studio Community", "Ubuntu", "CentOS", "Linux Mint", "Scrum", "Jira", "Looker", "Looker Studio", "SAP", "SAP Business One", "Dash"]
+    skills: ["Python", "Html", "Css", "JavaScript", "Node.js", "TypeScript", "React", "Vue.js", "Nuxt.js", "Vite", "Power BI", ".Net", "SQL", "C#", "C++", "Java", "Php", "Bash", "MongoDB", "LookerDB", "Docker", "N8N", "Power Automate", "Power Apps", "Excel", "Sharepoint", "Copilot studio", "Figma", "Visual Studio Code", "Visual Studio Community", "Ubuntu", "CentOS", "Linux Mint", "Scrum", "Jira", "Looker", "Looker Studio", "SAP", "SAP Business One", "Dash", "Azure DevOps"]
   },
   en: {
     role: "Software Development / Data & Automation Specialist",
@@ -64,7 +64,7 @@ export const translations = {
     interestsTitle: "Interests",
     interests: ["Data Analysis", "Artificial Intelligence", "Software", "Object-Oriented Programming", "Databases", "Digital Transformation", "Business Intelligence", "Cloud Computing"],
     skillsTitle: "Skills",
-    skills: ["Python", "Html", "Css", "JavaScript", "Node.js", "TypeScript", "React", "Vue.js", "Nuxt.js", "Vite", "Power BI", ".Net", "SQL", "C#", "C++", "Java", "Php", "Bash", "MongoDB", "LookerDB", "Docker", "N8N", "Power Automate", "Power Apps", "Excel", "Sharepoint", "Copilot studio", "Figma", "Visual Studio Code", "Visual Studio Community", "Ubuntu", "CentOS", "Linux Mint", "Scrum", "Jira", "Looker", "Looker Studio", "SAP", "SAP Business One", "Dash"]
+    skills: ["Python", "Html", "Css", "JavaScript", "Node.js", "TypeScript", "React", "Vue.js", "Nuxt.js", "Vite", "Power BI", ".Net", "SQL", "C#", "C++", "Java", "Php", "Bash", "MongoDB", "LookerDB", "Docker", "N8N", "Power Automate", "Power Apps", "Excel", "Sharepoint", "Copilot studio", "Figma", "Visual Studio Code", "Visual Studio Community", "Ubuntu", "CentOS", "Linux Mint", "Scrum", "Jira", "Looker", "Looker Studio", "SAP", "SAP Business One", "Dash", "Azure DevOps"]
   }
 };
 
@@ -108,7 +108,8 @@ export const skillLogos: Record<string, string> = {
   "Looker Studio": "https://upload.wikimedia.org/wikipedia/commons/9/91/Looker_Studio_logo.svg",
   "SAP": "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg",
   "SAP Business One": "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg",
-  "Dash": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Plotly-logo.png/1200px-Plotly-logo.png"
+  "Dash": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Plotly-logo.png/1200px-Plotly-logo.png",
+  "Azure DevOps": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
 };
 
 export const getProjects = (lang: Language): Project[] => [
