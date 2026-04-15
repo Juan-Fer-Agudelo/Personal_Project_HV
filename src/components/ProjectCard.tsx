@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from "motion/react";
+import { ExternalLink } from "lucide-react";
 import { Project } from "../types";
 
 interface ProjectCardProps {
@@ -50,9 +51,23 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onClic
       
       <div className="p-4 md:p-6 flex-1 flex flex-col justify-between">
         <div>
-          <h4 className="text-[11px] sm:text-xs md:text-base font-black text-slate-900 mb-1 md:mb-2 group-hover:text-blue-600 transition-colors line-clamp-2 leading-tight">
-            {project.title}
-          </h4>
+          <div className="flex justify-between items-start mb-1 md:mb-2">
+            <h4 className="text-[11px] sm:text-xs md:text-base font-black text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-2 leading-tight flex-1">
+              {project.title}
+            </h4>
+            {project.link && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open(project.link, '_blank');
+                }}
+                className="ml-2 p-1.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200 flex items-center gap-1 group/btn"
+              >
+                <ExternalLink className="w-3 h-3" />
+                <span className="text-[8px] font-black uppercase hidden sm:inline">Ver</span>
+              </button>
+            )}
+          </div>
           <div className="flex flex-col gap-0.5">
             <p className="text-[9px] md:text-[10px] font-black text-blue-600 uppercase tracking-widest">
               {project.company}

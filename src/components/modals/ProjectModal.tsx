@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { X, BarChart3 } from "lucide-react";
+import { X, BarChart3, ExternalLink } from "lucide-react";
 import { 
   BarChart, 
   Bar, 
@@ -61,7 +61,20 @@ export const ProjectModal = ({ project, t, onClose }: ProjectModalProps) => {
                 </div>
                 <div>
                   <h3 className="text-xl md:text-3xl font-black text-slate-900 leading-tight tracking-tight">{project.title}</h3>
-                  <p className="text-blue-600 text-[10px] md:text-xs font-black uppercase tracking-widest mt-1">{project.company}</p>
+                  <div className="flex items-center gap-3 mt-1">
+                    <p className="text-blue-600 text-[10px] md:text-xs font-black uppercase tracking-widest">{project.company}</p>
+                    {project.link && (
+                      <a 
+                        href={project.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 px-3 py-1 bg-blue-600 text-white rounded-full text-[9px] font-black uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        Ver Desarrollo
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
 

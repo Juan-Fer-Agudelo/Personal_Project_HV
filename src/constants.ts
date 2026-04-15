@@ -114,6 +114,36 @@ export const skillLogos: Record<string, string> = {
 
 export const getProjects = (lang: Language): Project[] => [
   {
+    id: 11,
+    title: lang === 'es' ? "AI Support Analyst" : "AI Support Analyst",
+    description: lang === 'es' ? "Sistema de IA para el análisis automatizado, categorización y respuesta sugerida de tickets de soporte." : "AI system for automated analysis, categorization, and suggested response of support tickets.",
+    fullDescription: lang === 'es'
+      ? "Proyecto personal desarrollado para optimizar la gestión de mesas de ayuda. Utiliza modelos de lenguaje de gran escala (LLM) para realizar análisis de sentimiento, categorización automática por urgencia y tema, y generación de borradores de respuesta. Implementado con una arquitectura que permite procesar grandes volúmenes de datos históricos para identificar patrones de fallas recurrentes, reduciendo el tiempo de primera respuesta en un 40%."
+      : "Personal project developed to optimize help desk management. It uses large language models (LLMs) to perform sentiment analysis, automatic categorization by urgency and topic, and response draft generation. Implemented with an architecture that allows processing large volumes of historical data to identify recurring failure patterns, reducing first response time by 40%.",
+    technologies: [
+      { name: "React 19", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "Vite", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" },
+      { name: "Tailwind CSS 4", icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" },
+      { name: "shadcn/ui", icon: "https://avatars.githubusercontent.com/u/139895814?s=200&v=4" },
+      { name: "Motion", icon: "https://raw.githubusercontent.com/framer/motion/main/packages/framer-motion/assets/framer-motion.svg" },
+      { name: "Lucide React", icon: "https://lucide.dev/logo.svg" },
+      { name: "Sonner", icon: "https://sonner.emilkowal.ski/favicon.ico" },
+      { name: "Radix UI", icon: "https://avatars.githubusercontent.com/u/75042455?s=200&v=4" }
+    ],
+    toolUsage: [
+      { name: "LLM Integration", value: 95 },
+      { name: "Python", value: 90 },
+      { name: "Prompt Engineering", value: 85 }
+    ],
+    progress: 100,
+    date: lang === 'es' ? "Marzo 2026" : "March 2026",
+    company: lang === 'es' ? "Proyecto Personal" : "Personal Project",
+    icon: React.createElement(Cpu, { className: "w-6 h-6" }),
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80", // Neural network/AI visual
+    link: "https://project-portafolio.vercel.app/"
+  },
+  {
     id: 1,
     title: lang === 'es' ? "Aplicación de Cambios de Estructura y Nómina" : "Structure and Payroll Change Application",
     description: lang === 'es' ? "Aplicativo móvil para gestionar cambios organizacionales y novedades de nómina críticos en planta." : "Mobile app to manage critical organizational changes and payroll news in the plant.",
