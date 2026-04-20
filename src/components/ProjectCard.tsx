@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { motion } from "motion/react";
 import { ExternalLink } from "lucide-react";
 import { Project } from "../types";
@@ -9,7 +9,7 @@ interface ProjectCardProps {
   onClick: () => void;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onClick }) => {
+export const ProjectCard = memo(({ project, index, onClick }: ProjectCardProps) => {
   const colors = [
     { bg: 'bg-blue-50', icon: 'text-blue-600', bar: 'bg-blue-600', hover: 'hover:border-blue-400' },
     { bg: 'bg-purple-50', icon: 'text-purple-600', bar: 'bg-purple-600', hover: 'hover:border-purple-400' },
@@ -24,15 +24,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onClic
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05 }}
       whileHover={{ 
-        y: -12, 
-        scale: 1.05,
-        rotateX: 4,
-        rotateY: 4,
-        boxShadow: "0 25px 50px -12px rgb(0 0 0 / 0.15)"
+        y: -8, 
+        scale: 1.02,
+        boxShadow: "0 20px 40px -12px rgb(0 0 0 / 0.12)"
       }}
       whileTap={{ scale: 0.98 }}
       onClick={onClick}
-      className={`aspect-square bg-white/60 backdrop-blur-md border border-white/40 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden ${color.hover} transition-all cursor-pointer group flex flex-col shadow-xl shadow-slate-200/30 perspective-1000`}
+      className={`aspect-square bg-white/70 backdrop-blur-sm border border-white/40 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden ${color.hover} transition-all cursor-pointer group flex flex-col shadow-xl shadow-slate-200/30`}
     >
       <div className="relative h-1/2 w-full overflow-hidden">
         <img 
@@ -87,4 +85,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onClic
       </div>
     </motion.div>
   );
-};
+});
+
+ProjectCard.displayName = 'ProjectCard';

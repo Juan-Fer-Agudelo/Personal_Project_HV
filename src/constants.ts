@@ -140,7 +140,7 @@ export const getProjects = (lang: Language): Project[] => [
     date: lang === 'es' ? "Marzo 2026" : "March 2026",
     company: lang === 'es' ? "Proyecto Personal" : "Personal Project",
     icon: React.createElement(Cpu, { className: "w-6 h-6" }),
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80", // Neural network/AI visual
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=70", // Neural network/AI visual
     link: "https://project-portafolio.vercel.app/"
   },
   {
@@ -165,7 +165,7 @@ export const getProjects = (lang: Language): Project[] => [
     date: lang === 'es' ? "Mayo 2025 - Octubre 2025" : "May 2025 - October 2025",
     company: "Renault Sofasa",
     icon: React.createElement(Users, { className: "w-6 h-6" }),
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=70"
   },
   {
     id: 2,
@@ -189,7 +189,7 @@ export const getProjects = (lang: Language): Project[] => [
     date: lang === 'es' ? "Febrero 2026 - Marzo 2026" : "February 2026 - March 2026",
     company: "Simex",
     icon: React.createElement(Zap, { className: "w-6 h-6" }),
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" // Data flow/Automation concept
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=70" // Data flow/Automation concept
   },
   {
     id: 4,
@@ -213,7 +213,7 @@ export const getProjects = (lang: Language): Project[] => [
     date: lang === 'es' ? "Octubre 2025 - Diciembre 2025" : "October 2025 - December 2025",
     company: "Renault Sofasa",
     icon: React.createElement(LineChart, { className: "w-6 h-6" }),
-    image: "https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&w=800&q=80" // Dashboard style
+    image: "https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&w=600&q=70" // Dashboard style
   },
   {
     id: 7,
@@ -237,7 +237,7 @@ export const getProjects = (lang: Language): Project[] => [
     date: lang === 'es' ? "Noviembre 2025 - Marzo 2026" : "November 2025 - March 2026",
     company: lang === 'es' ? "Simex / Renault" : "Simex / Renault",
     icon: React.createElement(FileSpreadsheet, { className: "w-6 h-6" }),
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=70"
   },
   {
     id: 8,
@@ -260,7 +260,7 @@ export const getProjects = (lang: Language): Project[] => [
     date: "2025",
     company: lang === 'es' ? "Innovación TI" : "IT Innovation",
     icon: React.createElement(Cpu, { className: "w-6 h-6" }),
-    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=600&q=70"
   },
   {
     id: 9,
@@ -284,7 +284,7 @@ export const getProjects = (lang: Language): Project[] => [
     date: lang === 'es' ? "Mayo 2025 - Julio 2025" : "May 2025 - July 2025",
     company: lang === 'es' ? "U. Salazar y Herrera" : "Salazar y Herrera University",
     icon: React.createElement(Users, { className: "w-6 h-6" }),
-    image: "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80" // Deep Learning / Neural style
+    image: "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=600&q=70" // Deep Learning / Neural style
   },
   {
     id: 10,
@@ -308,6 +308,6 @@ export const getProjects = (lang: Language): Project[] => [
     date: lang === 'es' ? "Marzo 2026 - Abril 2026" : "March 2026 - April 2026",
     company: "Contadoras AQ",
     icon: React.createElement(Globe, { className: "w-6 h-6" }),
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" // Business meeting
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=70" // Business meeting
   }
 ];

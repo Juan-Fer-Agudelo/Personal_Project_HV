@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Language, Project } from "./types";
 import { translations, getProjects } from "./constants";
 import { Background } from "./components/Background";
@@ -16,9 +16,11 @@ export default function App() {
   const [showSkills, setShowSkills] = useState(false);
   const [showContact, setShowContact] = useState(false);
   const [lang, setLang] = useState<Language>('es');
-
-  const t = (translations[lang] as any);
-  const projects = getProjects(lang);
+  
+  const { t, projects } = useMemo(() => ({
+    t: translations[lang] as any,
+    projects: getProjects(lang)
+  }), [lang]);
 
   return (
     <div className="h-screen bg-[#f0f4f8]/50 text-slate-800 font-sans selection:bg-blue-500/30 overflow-hidden flex flex-col relative">
