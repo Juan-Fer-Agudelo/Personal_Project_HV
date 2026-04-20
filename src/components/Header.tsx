@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
-import { Info, Cpu, Users, Github, Linkedin, Mail, Phone } from "lucide-react";
+import { Info, Cpu, Users, Github, Linkedin, Mail } from "lucide-react";
 import { Language } from "../types";
 
 interface HeaderProps {
@@ -88,12 +88,6 @@ export const Header = ({ t, lang, setLang, setShowAbout, setShowSkills, showCont
                       <Mail className="w-4 h-4 text-red-500" />
                     </div>
                     <span className="truncate font-medium">juanferagudelo475@gmail.com</span>
-                  </a>
-                  <a href="tel:+573016718793" className="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-all text-xs text-slate-700 group">
-                    <div className="p-1.5 bg-emerald-100 rounded-lg group-hover:bg-white transition-colors">
-                      <Phone className="w-4 h-4 text-emerald-600" />
-                    </div>
-                    <span className="truncate font-medium">3016718793</span>
                   </a>
                 </motion.div>
               </>

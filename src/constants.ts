@@ -22,8 +22,8 @@ export const translations = {
     finished: "Finalizado",
     toolUsage: "Uso de Herramientas (%)",
     toolUsageNote: "* Estimación del tiempo y esfuerzo dedicado a cada herramienta durante el desarrollo.",
-    footer: "Desarrollado con pasión por la automatización.",
-    switchLang: "Translator",
+    footer: "Software & Data Analytics Specialist",
+    switchLang: "English",
     aboutTitle: "Sobre Mí",
     learnMore: "Conoce más sobre mí",
     skillsBtn: "Habilidades",
@@ -50,8 +50,8 @@ export const translations = {
     finished: "Completed",
     toolUsage: "Tool Usage (%)",
     toolUsageNote: "* Estimated time and effort dedicated to each tool during development.",
-    footer: "Developed with passion for automation.",
-    switchLang: "Translator",
+    footer: "Software & Data Analytics Specialist",
+    switchLang: "Español",
     aboutTitle: "About Me",
     learnMore: "Learn more about me",
     skillsBtn: "Skills",
@@ -140,7 +140,7 @@ export const getProjects = (lang: Language): Project[] => [
     date: lang === 'es' ? "Marzo 2026" : "March 2026",
     company: lang === 'es' ? "Proyecto Personal" : "Personal Project",
     icon: React.createElement(Cpu, { className: "w-6 h-6" }),
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=70", // Neural network/AI visual
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=70", 
     link: "https://project-portafolio.vercel.app/"
   },
   {
