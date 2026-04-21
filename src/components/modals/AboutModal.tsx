@@ -44,11 +44,12 @@ export const AboutModal = ({ t, onClose }: AboutModalProps) => {
         <div className="space-y-8 pr-2">
           <div className="relative w-full aspect-[4/3] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden mb-4 border-4 border-white shadow-2xl">
             <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 via-transparent to-transparent z-10" />
-            <img 
-              src="https://media.licdn.com/dms/image/v2/D4E03AQF1bhRXulHxNA/profile-displayphoto-scale_200_200/B4EZsWSPPGIUAY-/0/1765605440434?e=2147483647&v=beta&t=6ZX5tjiWuqgAODt3WzDZYo-w6B9PqqP46_9QoI2oai0" 
+            <motion.img 
+              whileTap={{ scale: 1.05 }}
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJRqCLJHbeV2uZ2udz4FOx7WWkgOIQjJzmkg&s" 
               alt="Juan Fernando Agudelo" 
               referrerPolicy="no-referrer"
-              className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700"
+              className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700 cursor-pointer"
             />
           </div>
           <div className="space-y-6">

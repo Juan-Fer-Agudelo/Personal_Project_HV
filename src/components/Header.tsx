@@ -18,11 +18,13 @@ export const Header = ({ t, lang, setLang, setShowAbout, setShowSkills, showCont
       <div className="flex items-center gap-3">
         <div className="relative group">
           <div className="absolute -inset-1.5 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 rounded-full blur opacity-40 group-hover:opacity-70 transition-opacity"></div>
-          <img 
-            src="https://media.licdn.com/dms/image/v2/D4E03AQF1bhRXulHxNA/profile-displayphoto-scale_200_200/B4EZsWSPPGIUAY-/0/1765605440434?e=2147483647&v=beta&t=6ZX5tjiWuqgAODt3WzDZYo-w6B9PqqP46_9QoI2oai0" 
+          <motion.img 
+            whileTap={{ scale: 1.5 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJRqCLJHbeV2uZ2udz4FOx7WWkgOIQjJzmkg&s" 
             alt="Juan Fernando Agudelo" 
             referrerPolicy="no-referrer"
-            className="relative w-9 h-9 rounded-full object-cover border-2 border-white shadow-lg"
+            className="relative w-9 h-9 rounded-full object-cover border-2 border-white shadow-lg cursor-pointer z-10"
           />
         </div>
         <div className="hidden sm:block">
