@@ -99,12 +99,26 @@ export const Header = ({ t, lang, setLang, setShowAbout, setShowSkills, showCont
 
         <div className="h-6 w-px bg-slate-200 mx-1 md:mx-2" />
 
-        <button 
+        <div 
           onClick={() => setLang(lang === 'es' ? 'en' : 'es')}
-          className="px-3 md:px-4 py-2 rounded-xl bg-gradient-to-r from-slate-900 to-slate-800 text-white text-[10px] font-black hover:from-blue-600 hover:to-blue-500 transition-all uppercase tracking-widest shadow-lg"
+          className="relative flex items-center justify-around w-16 h-8 bg-slate-200/60 hover:bg-slate-200/80 rounded-full border border-slate-300/40 select-none cursor-pointer transition-colors shadow-inner"
         >
-          {t.switchLang}
-        </button>
+          {/* Active Slider */}
+          <motion.div
+            className="absolute top-[3px] left-[3px] h-[24px] w-[28px] bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full shadow"
+            animate={{
+              x: lang === 'es' ? 0 : 30
+            }}
+            transition={{ type: "spring", stiffness: 450, damping: 30 }}
+          />
+          
+          <span className={`z-10 text-[9px] font-black select-none pointer-events-none tracking-wider w-7 text-center transition-colors duration-200 ${lang === 'es' ? 'text-white' : 'text-slate-600'}`}>
+            ES
+          </span>
+          <span className={`z-10 text-[9px] font-black select-none pointer-events-none tracking-wider w-7 text-center transition-colors duration-200 ${lang === 'en' ? 'text-white' : 'text-slate-600'}`}>
+            EN
+          </span>
+        </div>
       </nav>
     </header>
   );

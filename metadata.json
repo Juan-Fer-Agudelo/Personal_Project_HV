@@ -1,5 +1,6 @@
 {
-  "name": "Juan Fernando Agudelo | Portafolio",
-  "description": "Portafolio dinámico de proyectos para Analista de Automatización y Datos.",
-  "requestFramePermissions": []
+  "name": "Juan Fernando Agudelo | Analista de Automatización y Desarrollador",
+  "description": "Portafolio profesional de Juan Fernando Agudelo: Analista de Automatización, Datos y Desarrollador de Software especializado en n8n, Python, SQL y React.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
