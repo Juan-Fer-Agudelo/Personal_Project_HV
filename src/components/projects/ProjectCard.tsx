@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { motion } from "motion/react";
 import { ExternalLink } from "lucide-react";
-import { Project } from "../types";
+import { Project } from "../../types";
 
 interface ProjectCardProps {
   project: Project;
@@ -20,6 +20,7 @@ export const ProjectCard = memo(({ project, index, onClick }: ProjectCardProps) 
 
   return (
     <motion.div
+      id={`project-card-${project.id}`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05 }}
@@ -55,6 +56,7 @@ export const ProjectCard = memo(({ project, index, onClick }: ProjectCardProps) 
             </h4>
             {project.link && (
               <button
+                maxLength={40}
                 onClick={(e) => {
                   e.stopPropagation();
                   window.open(project.link, '_blank');

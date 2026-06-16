@@ -1,25 +1,19 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from "react";
-
-const bgImages = [
-  "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1280&q=60", // Software Dev
-  "https://images.unsplash.com/photo-1518433278981-2ad502fbb1b9?auto=format&fit=crop&w=1280&q=60", // Automation
-  "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1280&q=60", // Network
-  "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1280&q=60"  // Technology
-];
+import { BACKGROUND_IMAGES } from "../../assets/backgrounds";
 
 export const Background = () => {
   const [bgIndex, setBgIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setBgIndex((prev) => (prev + 1) % bgImages.length);
+      setBgIndex((prev) => (prev + 1) % BACKGROUND_IMAGES.length);
     }, 8000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0" id="app-background-container">
       <AnimatePresence mode="wait">
         <motion.div 
           key={bgIndex}
@@ -30,7 +24,7 @@ export const Background = () => {
           className="absolute inset-0"
         >
           <img 
-            src={bgImages[bgIndex]} 
+            src={BACKGROUND_IMAGES[bgIndex]} 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
             alt="Background"

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { X, Cpu } from "lucide-react";
-import { skillLogos } from "../../constants";
+import { skillLogos } from "../../assets/icons";
 
 interface SkillsModalProps {
   t: any;

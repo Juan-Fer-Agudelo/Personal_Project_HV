@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "motion/react";
 import { Info, Cpu, Users, Github, Linkedin, Mail } from "lucide-react";
-import { Language } from "../types";
+import { Language } from "../../types";
 
 interface HeaderProps {
   t: any;
@@ -14,7 +14,7 @@ interface HeaderProps {
 
 export const Header = ({ t, lang, setLang, setShowAbout, setShowSkills, showContact, setShowContact }: HeaderProps) => {
   return (
-    <header className="h-16 border-b border-white/20 bg-white/40 backdrop-blur-2xl flex items-center justify-between px-4 md:px-6 z-50 shadow-sm relative">
+    <header className="h-16 border-b border-white/20 bg-white/40 backdrop-blur-2xl flex items-center justify-between px-4 md:px-6 z-50 shadow-sm relative" id="app-site-header">
       <div className="flex items-center gap-3">
         <div className="relative group">
           <div className="absolute -inset-1.5 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 rounded-full blur opacity-40 group-hover:opacity-70 transition-opacity"></div>
@@ -35,6 +35,7 @@ export const Header = ({ t, lang, setLang, setShowAbout, setShowSkills, showCont
 
       <nav className="flex items-center gap-2">
         <button 
+          id="header-learn-more-btn"
           onClick={() => setShowAbout(true)}
           className="p-2 md:px-4 md:py-2 rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-200 hover:bg-blue-700 hover:shadow-blue-300 transition-all text-[10px] md:text-xs font-bold flex items-center gap-2"
           aria-label={t.learnMore}
@@ -44,6 +45,7 @@ export const Header = ({ t, lang, setLang, setShowAbout, setShowSkills, showCont
         </button>
 
         <button 
+          id="header-skills-btn"
           onClick={() => setShowSkills(true)}
           className="p-2 md:px-4 md:py-2 rounded-xl bg-white border border-slate-200 hover:border-blue-400 hover:text-blue-600 transition-all text-[10px] md:text-xs text-slate-700 font-bold flex items-center gap-2 shadow-sm"
           aria-label={t.skillsBtn}
@@ -54,6 +56,7 @@ export const Header = ({ t, lang, setLang, setShowAbout, setShowSkills, showCont
 
         <div className="relative">
           <button 
+            id="header-contact-toggle-btn"
             onClick={() => setShowContact(!showContact)}
             className="p-2 md:px-4 md:py-2 rounded-xl bg-white border border-slate-200 hover:border-blue-400 hover:text-blue-600 transition-all text-[10px] md:text-xs text-slate-700 font-bold flex items-center gap-2 shadow-sm"
             aria-label={t.contactBtn}
@@ -67,6 +70,7 @@ export const Header = ({ t, lang, setLang, setShowAbout, setShowSkills, showCont
               <>
                 <div className="fixed inset-0 z-10" onClick={() => setShowContact(false)} />
                 <motion.div 
+                  id="contact-details-dropdown"
                   initial={{ opacity: 0, y: 10, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
@@ -100,6 +104,7 @@ export const Header = ({ t, lang, setLang, setShowAbout, setShowSkills, showCont
         <div className="h-6 w-px bg-slate-200 mx-1 md:mx-2" />
 
         <div 
+          id="language-switch-container"
           onClick={() => setLang(lang === 'es' ? 'en' : 'es')}
           className="relative flex items-center justify-around w-16 h-8 bg-slate-200/60 hover:bg-slate-200/80 rounded-full border border-slate-300/40 select-none cursor-pointer transition-colors shadow-inner"
         >

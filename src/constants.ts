@@ -8,6 +8,7 @@ import {
   Globe
 } from "lucide-react";
 import { Project, Language } from "./types";
+import { skillLogos } from "./assets/icons";
 
 export const translations = {
   es: {
@@ -36,7 +37,7 @@ export const translations = {
     interestsTitle: "Intereses",
     interests: ["Análisis de datos", "Inteligencia artificial", "Software", "Programación orientada a objetos", "Bases de datos", "Transformación digital", "Business Intelligence", "Cloud Computing"],
     skillsTitle: "Habilidades",
-    skills: ["Python", "Html", "Css", "JavaScript", "Node.js", "TypeScript", "React", "Vue.js", "Nuxt.js", "Vite", "Power BI", ".Net", "SQL", "C#", "C++", "Java", "Php", "Bash", "MongoDB", "LookerDB", "Docker", "N8N", "Power Automate", "Power Apps", "Excel", "Sharepoint", "Copilot studio", "Figma", "Visual Studio Code", "Visual Studio Community", "Ubuntu", "CentOS", "Linux Mint", "Scrum", "Jira", "Looker", "Looker Studio", "SAP", "SAP Business One", "Dash", "Azure DevOps"]
+    skills: ["Python", "Html", "Css", "JavaScript", "Node.js", "TypeScript", "React", "Vue.js", "Nuxt.js", "Vite", "Astro", "Angular", "Zapier", "Claude", "APIs", "Power BI", ".Net", "SQL", "C#", "C++", "Java", "Php", "Bash", "MongoDB", "LookerDB", "Docker", "N8N", "Power Automate", "Power Apps", "Excel", "Sharepoint", "Copilot studio", "Figma", "Visual Studio Code", "Visual Studio Community", "Ubuntu", "CentOS", "Linux Mint", "Scrum", "Jira", "Looker", "Looker Studio", "SAP", "SAP Business One", "Dash", "Azure DevOps"]
   },
   en: {
     role: "Software Development / Data & Automation Specialist",
@@ -64,54 +65,9 @@ export const translations = {
     interestsTitle: "Interests",
     interests: ["Data Analysis", "Artificial Intelligence", "Software", "Object-Oriented Programming", "Databases", "Digital Transformation", "Business Intelligence", "Cloud Computing"],
     skillsTitle: "Skills",
-    skills: ["Python", "Html", "Css", "JavaScript", "Node.js", "TypeScript", "React", "Vue.js", "Nuxt.js", "Vite", "Power BI", ".Net", "SQL", "C#", "C++", "Java", "Php", "Bash", "MongoDB", "LookerDB", "Docker", "N8N", "Power Automate", "Power Apps", "Excel", "Sharepoint", "Copilot studio", "Figma", "Visual Studio Code", "Visual Studio Community", "Ubuntu", "CentOS", "Linux Mint", "Scrum", "Jira", "Looker", "Looker Studio", "SAP", "SAP Business One", "Dash", "Azure DevOps"]
+    skills: ["Python", "Html", "Css", "JavaScript", "Node.js", "TypeScript", "React", "Vue.js", "Nuxt.js", "Vite", "Astro", "Angular", "Zapier", "Claude", "APIs", "Power BI", ".Net", "SQL", "C#", "C++", "Java", "Php", "Bash", "MongoDB", "LookerDB", "Docker", "N8N", "Power Automate", "Power Apps", "Excel", "Sharepoint", "Copilot studio", "Figma", "Visual Studio Code", "Visual Studio Community", "Ubuntu", "CentOS", "Linux Mint", "Scrum", "Jira", "Looker", "Looker Studio", "SAP", "SAP Business One", "Dash", "Azure DevOps"]
   }
 };
-
-export const skillLogos: Record<string, string> = {
-  "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-  "Html": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-  "Css": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-  "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-  "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-  "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  "Vue.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
-  "Nuxt.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg",
-  "Vite": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg",
-  "Power BI": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Power_bi_logo_black.svg",
-  ".Net": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg",
-  "SQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-  "C#": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
-  "C++": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
-  "Java": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-  "Php": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-  "Bash": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
-  "MongoDB": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-  "LookerDB": "https://upload.wikimedia.org/wikipedia/commons/0/03/Looker_logo.svg",
-  "Docker": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-  "N8N": "https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-logo.png",
-  "Power Automate": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Microsoft_Power_Automate.svg/1200px-Microsoft_Power_Automate.svg.png",
-  "Power Apps": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Microsoft_Power_Apps.svg/1200px-Microsoft_Power_Apps.svg.png",
-  "Excel": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png",
-  "Sharepoint": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Microsoft_SharePoint.svg/1200px-Microsoft_SharePoint.svg.png",
-  "Copilot studio": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Microsoft_Copilot_logo.svg",
-  "Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-  "Visual Studio Code": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-  "Visual Studio Community": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg",
-  "Ubuntu": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg",
-  "CentOS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/centos/centos-original.svg",
-  "Linux Mint": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linuxmint/linuxmint-original.svg",
-  "Scrum": "https://cdn-icons-png.flaticon.com/512/5360/5360800.png",
-  "Jira": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
-  "Looker": "https://upload.wikimedia.org/wikipedia/commons/0/03/Looker_logo.svg",
-  "Looker Studio": "https://upload.wikimedia.org/wikipedia/commons/9/91/Looker_Studio_logo.svg",
-  "SAP": "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg",
-  "SAP Business One": "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg",
-  "Dash": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Plotly-logo.png/1200px-Plotly-logo.png",
-  "Azure DevOps": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
-};
-
 export const getProjects = (lang: Language): Project[] => [
   {
     id: 11,
